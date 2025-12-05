@@ -4279,6 +4279,9 @@ pub struct SubscriptionPurchaseLineItem {
     /// The purchased product ID (for example, 'monthly001').
     #[serde(rename = "productId")]
     pub product_id: Option<String>,
+    // The order id of the latest successful order associated with this item. Not present if the item is not owned by the user yet (e.g. the item being deferred replaced to).
+    #[serde(rename = "latestSuccessfulOrderId")]
+    pub latest_successful_order_id: Option<String>,
 }
 
 impl common::Part for SubscriptionPurchaseLineItem {}

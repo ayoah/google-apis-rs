@@ -8905,6 +8905,10 @@
                 "productId": {
                     "description": "The purchased product ID (for example, 'monthly001').",
                     "type": "string"
+                },
+                "latestSuccessfulOrderId": {
+                    "description": "The order id of the latest successful order associated with this item. Not present if the item is not owned by the user yet (e.g. the item being deferred replaced to).",
+                    "type": "string"
                 }
             },
             "type": "object"
